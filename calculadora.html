@@ -11,120 +11,112 @@
 </head>
 
 <body>
-    <h1>INPUTS</h1>
+    <a id="goToPrincipal" href="index.html">PÁGINA PRINCIPAL</a>
 
-    <h2>Dados do Avião</h2>
-    <p>
-        Peso: <input id="peso" type="number" size="10" /> <br>
-        Área Molhada: <input id="areaMolhada" type="number" size="10" /> <br>
-        <!-- N máximo: <input id="nMax" type="number" size="10" /> -->
+    <h1>Calculadora Aerodinâmica</h1>
+
+    <h2>1ª Etapa - Dados Práticos</h2>
+
+    <h3>Dados do Avião</h3>
+    <div class="inputs">
+        <p>
+            Peso <br>
+            <input id="peso" type="number" size="10" /> <br> <br>
+            Área Molhada <br>
+            <input id="areaMolhada" type="number" size="10" /> <br>
+            <!-- N máximo: <input id="nMax" type="number" size="10" /> -->
+        </p>
+    </div>
+
+    <h3>Características do Fluido</h3>
+    <div class="inputs">
+        <p>
+            Velocidade <br>
+            <input id="velocidade" type="number" size="10" /> <br>
+            Densidade <br>
+            <input id="densidade" type="number" size="10" /> <br>
+            Viscosidade cinemática <br>
+            <input id="viscoCin" type="number" size="10" /> <br>
+        </p>
+    </div>
+
+    <h3>Dados da Asa</h3>
+    <div class="inputs">
+        <p>
+            <b>Tipo 1: </b>Retangular <br>
+            <b>Tipo 2: </b> Trapezoidal <br>
+            <b>Tipo 3: </b> Mista <br> <br>
+            Tipo <br>
+            <input id="tipoAsa" type="number" size="10" /> <br>
+            Envergadura <br>
+            <input id="envergadura" type="number" size="10" /> <br>
+            Semi envergadura <br>
+            <input id="semiEnvergadura" type="number" size="10" /> <br>
+            Corda na raiz <br>
+            <input id="cordaRaiz" type="number" size="10" /> <br>
+            Corda na ponta <br>
+            <input id="cordaPonta" type="number" size="10" /> <br>
+        </p>
+    </div>
+
+    <h2>2ª Etapa - Cálculo de Reynolds</h2>
+
+    <div class="text-center"><button class="button button1" type="button" onclick="calcReynolds()"><b>CALCULAR REYNOLDS</b></button></div>
+    <p class="outputs" id="calcReynolds">
     </p>
 
-    <h2>Características do Fluido</h2>
-    <p>
-        Velocidade: <input id="velocidade" type="number" size="10" /> <br>
-        Densidade: <input id="densidade" type="number" size="10" /> <br>
-        Viscosidade cinemática: <input id="viscoCin" type="number" size="10" /> <br>
-    </p>
+    <h2>3ª Etapa - Cálculo de Alongamento e afilamento</h2>
 
-    <h2>Dados da Asa</h2>
-    <p>
-        Tipo 1 -> Retangular <br>
-        Tipo 2 -> Trapezoidal <br>
-        Tipo 3 -> Mista <br> <br>
-        Tipo: <input id="tipoAsa" type="number" size="10" /> <br>
-        Envergadura: <input id="envergadura" type="number" size="10" /> <br>
-        Semi envergadura: <input id="semiEnvergadura" type="number" size="10" /> <br>
-        Corda na raiz: <input id="cordaRaiz" type="number" size="10" /> <br>
-        Corda na ponta: <input id="cordaPonta" type="number" size="10" /> <br>
-    </p>
+    <h3>Dados do Perfil Aerodinâmico</h3>
+    <div class="inputs">
+        <p>
+            cl_max <br>
+            <input id="clMax" type="number" size="10" /> <br>
+            cl_0 <br>
+            <input id="clZero" type="number" size="10" /> <br>
+            cl_{alpha0} <br>
+            <input id="clAlphaZero" type="number" size="10" /> <br>
+            alpha1 <br>
+            <input id="alpha1" type="number" size="10" /> <br>
+            cl1 <br>
+            <input id="cl1" type="number" size="10" /> <br>
+            alpha2 <br>
+            <input id="alpha2" type="number" size="10" /> <br>
+            cl2 <br>
+            <input id="cl2" type="number" size="10" /> <br>
+        </p>
+    </div>
 
-    <h1>CÁLCULO DE REYNOLDS</h1>
+    <div class="text-center"><button class="button button2" type="button" onclick="calculo1()"><b>CALCULAR ALONGAMENTO E AFILAMENTO</b></button></div>
+    <p class="outputs" id="Alongamento"></p>
+    <p class="outputs" id="Afilamento"></p>
 
-    <button id="calcReynoldsButton" type="button" onclick="calcReynolds()">Calcular Reynolds para simular o
-        perfil</button>
-    <p id="calcReynolds">
-    </p>
+    <h2>4ª Etapa - Cálculo dos Resultados Finais</h2>
 
-    <!-- <div id="tabela1">
-        <table id="tabela">
-            <thead>
-                <tr>
-                    <th>Peso</th>
-                    <th>Área Molhada</th>
-                    <th>Velocidade</th>
-                    <th>Densidade</th>
-                    <th>Viscosidade Cinemática</th>
-                    <th>Tipo</th>
-                    <th>Envergadura</th>
-                    <th>Semi Envergadura</th>
-                    <th>Corda na Raíz</th>
-                    <th>Corda na Ponta</th>
-                    <th>Reynolds</th>
-                </tr>
-            </thead>
-            <tbody id="linhas">
-            </tbody>
-        </table>
-    </div> -->
+    <div class="inputs">Delta <br>
+        <input id="delta" type="number" size="10" />
+    </div> <br> <br>
 
-    <h1>CALCULO ALONGAMENTO E AFILAMENTO</h1>
+    <div class="text-center">
+        <button class="button button3" type="button" onclick="calculo2()"><b>CALCULAR RESULTADOS</b></button>
+    </div>
 
-    <h2>Dados do Perfil Aerodinâmico</h2>
-    <p>
-        cl_max: <input id="clMax" type="number" size="10" /> <br>
-        cl_0: <input id="clZero" type="number" size="10" /> <br>
-        cl_{alpha0}: <input id="clAlphaZero" type="number" size="10" /> <br>
-        alpha1: <input id="alpha1" type="number" size="10" /> <br>
-        cl1: <input id="cl1" type="number" size="10" /> <br>
-        alpha2: <input id="alpha2" type="number" size="10" /> <br>
-        cl2: <input id="cl2" type="number" size="10" /> <br>
-    </p>
 
-    <button type="button" onclick="calculo1()">Calcular Alongamento e Afilamento para encontrar Delta</button>
-    <p id="AfilamentoAlongamento"></p>
-
-    <!-- <div id="tabela2">
-        <table id="tabela">
-            <thead>
-                <tr>
-                    <th>cl_max</th>
-                    <th>cl_0</th>
-                    <th>cl_{alpha0}</th>
-                    <th>alpha1</th>
-                    <th>cl1</th>
-                    <th>alpha2</th>
-                    <th>cl2</th>
-                    <th>Alongamento</th>
-                    <th>Afilamento</th>
-                </tr>
-            </thead>
-            <tbody id="linhas">
-            </tbody>
-        </table>
-    </div> -->
-
-    <h1>CÁLCULO RESULTADOS</h1>
-
-    Delta: <input id="delta" type="number" size="10" /> <br> <br>
-
-    <button type="button" onclick="calculo2()">Calcular Resultados</button>
-
-    <p id="areaAsa"></p>
-    <p id="alongamento"></p>
-    <p id="afilamento"></p>
-    <p id="cordaMedia"></p>
-    <p id="yMedio"></p>
-    <P id="a0"></P>
-    <P id="aAsa"></P>
-    <P id="constProp"></P>
-    <P id="CLMax"></P>
-    <P id="velStol"></P>
-    <P id="coefAtrito"></P>
-    <P id="coefParasita"></P>
-    <P id="clProjeto"></P>
-    <P id="cdProjeto"></P>
-    <P id="efProjeto"></P>
+    <p class="outputs" id="areaAsa"></p>
+    <p class="outputs" id="alongamento"></p>
+    <p class="outputs" id="afilamento"></p>
+    <p class="outputs" id="cordaMedia"></p>
+    <p class="outputs" id="yMedio"></p>
+    <P class="outputs" id="a0"></P>
+    <P class="outputs" id="aAsa"></P>
+    <P class="outputs" id="constProp"></P>
+    <P class="outputs" id="CLMax"></P>
+    <P class="outputs" id="velStol"></P>
+    <P class="outputs" id="coefAtrito"></P>
+    <P class="outputs" id="coefParasita"></P>
+    <P class="outputs" id="clProjeto"></P>
+    <P class="outputs" id="cdProjeto"></P>
+    <P class="outputs" id="efProjeto"></P>
 
     <div id="tabela3">
         <table id="tabela">

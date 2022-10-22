@@ -112,20 +112,6 @@ function calcReynolds() {
     let peso, areaMolhada, velocidade, densidade, viscoCin, tipo, envergadura, semiEnvergadura,
         cordaRaiz, cordaPonta, cordaMedia, afilamento, reynolds;
 
-    // const tr = document.createElement("tr");
-    // const td = document.createElement("td");
-    // const td2 = document.createElement("td");
-    // const td3 = document.createElement("td");
-    // const td4 = document.createElement("td");
-    // const td5 = document.createElement("td");
-    // const td6 = document.createElement("td");
-    // const td7 = document.createElement("td");
-    // const td8 = document.createElement("td");
-    // const td9 = document.createElement("td");
-    // const td10 = document.createElement("td");
-    // const td11 = document.createElement("td");
-    // const tbody = document.querySelector("tbody");
-
     // Dados do Avião a
     peso = parseFloat(document.getElementById("peso").value);
     areaMolhada = parseFloat(document.getElementById("areaMolhada").value);
@@ -147,33 +133,12 @@ function calcReynolds() {
     cordaMedia = cordaMediaAsa(cordaRaiz, afilamento, tipo);
 
     // Mostrar no site
-    reynolds = numeroReynolds(velocidade, cordaMedia, viscoCin);
-    document.getElementById("calcReynolds").innerText = "Reynolds: " + reynolds;
+    reynolds1 = numeroReynolds(velocidade, cordaMedia, viscoCin);
+    reynoldsStr = reynolds1.toString();
+    reynoldsSplitted = reynoldsStr.split('.');
+    reynoldsFinal = "." + parseInt(reynoldsSplitted[1]);
+    document.getElementById("calcReynolds").innerText = "Reynolds: " + reynoldsFinal;
 
-    // Atribuindo valores que serão adicionados dinamicamente na tabela
-    // td.innerText = peso;
-    // td2.innerText = areaMolhada;
-    // td3.innerText = velocidade;
-    // td4.innerText = densidade;
-    // td5.innerText = viscoCin;
-    // td6.innerText = tipo;
-    // td7.innerText = envergadura;
-    // td8.innerText = semiEnvergadura;
-    // td9.innerText = cordaRaiz;
-    // td10.innerText = cordaPonta;
-    // td11.innerText = reynolds;
-    // tr.appendChild(td);
-    // tr.appendChild(td2);
-    // tr.appendChild(td3);
-    // tr.appendChild(td4);
-    // tr.appendChild(td5);
-    // tr.appendChild(td6);
-    // tr.appendChild(td7);
-    // tr.appendChild(td8);
-    // tr.appendChild(td9);
-    // tr.appendChild(td10);
-    // tr.appendChild(td11);
-    // tbody.appendChild(tr);
 }
 
 function calculo1() {
@@ -201,7 +166,8 @@ function calculo1() {
     reynolds = numeroReynolds(velocidade, cordaMedia, viscoCin);
 
     // Mostrar no site
-    document.getElementById("AfilamentoAlongamento").innerText = "Informe Delta para Alongamento = " + alongamento.toPrecision(4) + " e Afilamento = " + afilamento;
+    document.getElementById("Alongamento").innerText = "Informe Delta para Alongamento = " + alongamento.toPrecision(4) + " e";
+    document.getElementById("Afilamento").innerText = "Afilamento = " + afilamento;
 }
 
 function calculo2() {
@@ -270,23 +236,6 @@ function calculo2() {
     clProjeto = coefSustentacaoProjeto(coefParasita, constProp);
     cdProjeto = coefArrastoProjeto(coefParasita, constProp, clProjeto);
     efProjeto = eficienciaMaxProjeto(clProjeto, cdProjeto);
-
-    // VALORES QUE DEVEM IR PRA LINHA DA TABELA
-    // document.getElementById("areaAsa").innerText = "Area da Asa: " + area;
-    // document.getElementById("alongamento").innerText = "Alongamento: " + alongamento;
-    // document.getElementById("afilamento").innerText = "Afilamento: " + afilamento;
-    // document.getElementById("cordaMedia").innerText = "Corda média: " + cordaMedia;
-    // document.getElementById("yMedio").innerText = "Y medio: " + yMed;
-    // document.getElementById("a0").innerText = "Coeficiente angular do perfil: " + a0;
-    // document.getElementById("aAsa").innerText = "Coeficiente angular da asa: " + aAsa;
-    // document.getElementById("constProp").innerText = "Constante de proporcionalidade: " + constProp;
-    // document.getElementById("CLMax").innerText = "Constante de sustentação máximo da asa: " + CLMax;
-    // document.getElementById("velStol").innerText = "Velocidade de estol: " + velStol;
-    // document.getElementById("coefAtrito").innerText = "Coeficiente de atrito Equivalente: " + coefAtrito;
-    // document.getElementById("coefParasita").innerText = "Coeficiente de arrasto parasita: " + coefParasita;
-    // document.getElementById("clProjeto").innerText = "Coeficiente de Sustentação do projeto: " + clProjeto;
-    // document.getElementById("cdProjeto").innerText = "Coeficiente de arrasto do projeto: " + cdProjeto;
-    // document.getElementById("efProjeto").innerText = "Eficiencia máxima do projeto: " + efProjeto;
 
     // Atribuindo valores que serão adicionados dinamicamente na tabela
     td.innerText = area.toPrecision(5);
