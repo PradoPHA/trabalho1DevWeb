@@ -1,0 +1,66 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    border-style: solid;
+    /* color: white; */
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+#containerTabela {
+    display: flex;
+    /*centro vertical de toda a tabela*/
+    align-items: center;
+    height: 50vh;
+}
+
+#tabela {
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid black;
+    /*borda externa*/
+    /*tirar espaços das bordas*/
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho da Linha */
+#tabela thead tr {
+    background-color: rgb(139, 206, 31);
+    text-align: center;
+}
+
+ /* Body da Linha */
+#tabela tbody tr {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#tabela thead tr th {
+    padding: 15px;
+}
+
+/* linha */
+#tabela tr {
+    border: 3px solid black;
+}
+
+#butao {
+    background-color: rgb(228, 72, 72);
+    color: rgb(0, 0, 0);
+}
