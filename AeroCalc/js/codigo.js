@@ -111,7 +111,7 @@ function sustentaçãoPontoAtuante (nMax, peso) {
 function calcReynolds() {
     let velocidade, cordaRaiz, cordaPonta, tipo, viscoCin, cordaMedia, afilamento;
 
-    // Dados do Avião
+    // Dados do Avião a
     velocidade = parseFloat(document.getElementById("velocidade").value);
 
     // Características do Fluido
