@@ -1,88 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Aerodinâmica</title>
-    <script type="text/javascript" src="./js/codigo.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>APRESENTAÇÃO LOTS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
 </head>
 <body>
-    <h1>INPUTS</h1>
+    <h1>APRESENTAÇÃO LOTS</h1>
 
-    <h2>Dados do Avião</h2>
-        <p>
-            Peso: <input id="peso" type="number" size="10" /> <br>
-            Área Molhada: <input id="areaMolhada" type="number" size="10" /> <br>
-            <!-- N máximo: <input id="nMax" type="number" size="10" /> -->
-        </p>
-
-    <h2>Características do Fluido</h2>
-        <p>
-            Velocidade: <input id="velocidade" type="number" size="10" /> <br>
-            Densidade: <input id="densidade" type="number" size="10" /> <br>
-            Viscosidade cinemática: <input id="viscoCin" type="number" size="10" /> <br>
-        </p>
-
-    <h2>Dados da Asa</h2>
-        <p>
-            Tipo 1 -> Retangular <br>
-            Tipo 2 -> Trapezoidal <br>
-            Tipo 3 -> Mista <br> <br>
-            Tipo: <input id="tipoAsa" type="number" size="10" /> <br>
-            Envergadura: <input id="envergadura" type="number" size="10" /> <br>
-            Semi envergadura: <input id="semiEnvergadura" type="number" size="10" /> <br>
-            Corda na raiz: <input id="cordaRaiz" type="number" size="10" /> <br>
-            Corda na ponta: <input id="cordaPonta" type="number" size="10" /> <br>
-
-
-
-        </p>
-
-    <h1>CÁLCULO DE REYNOLDS</h1>
-
-        <button type="button" onclick="calcReynolds()">Calcular Reynolds para simular o perfil</button>
-        <p id="calcReynolds">
-        </p>
-    
-    <h1>CALCULO 1</h1>
-
-    <h2>Dados do Perfil Aerodinâmico</h2>
-    <p>
-        cl_max: <input id="clMax" type="number" size="10" /> <br>
-        cl_0: <input id="clZero" type="number" size="10" /> <br>
-        cl_{alpha0}: <input id="clAlphaZero" type="number" size="10" /> <br>
-        alpha1: <input id="alpha1" type="number" size="10" /> <br>
-        cl1: <input id="cl1" type="number" size="10" /> <br>
-        alpha2: <input id="alpha2" type="number" size="10" /> <br>
-        cl2: <input id="cl2" type="number" size="10" /> <br>
-    </p>
-
-    <button type="button" onclick="calculo1()">Calcular 1</button>
-
-    <p id="AfilamentoAlongamento"></p>
-
-    <h1>CÁLCULO 2</h1>
-
-    Delta: <input id="delta" type="number" size="10" /> <br> <br>
-
-    <button type="button" onclick="calculo2()">Calcular 2</button>
-
-    <p id="areaAsa"></p>
-    <p id="alongamento"></p>
-    <p id="afilamento"></p>
-    <p id="cordaMedia"></p>
-    <p id="yMedio"></p>
-    <P id="a0"></P>
-    <P id="aAsa"></P>
-    <P id="constProp"></P>
-    <P id="CLMax"></P>
-    <P id="velStol"></P>
-    <P id="coefAtrito"></P>
-    <P id="coefParasita"></P>
-    <P id="clProjeto"></P>
-    <P id="cdProjeto"></P>
-    <P id="efProjeto"></P>
-
+    <a id="goToCalculadora" href="calculadora.html">CALCULADORA AERODINÂMICA</a>
 </body>
 </html>

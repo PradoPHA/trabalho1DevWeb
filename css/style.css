@@ -1,0 +1,35 @@
+#tabela {
+    margin: 0 auto;
+    width: 900px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 5%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho da Linha */
+#tabela thead tr {
+    background-color: rgb(72, 49, 173);
+    color: rgb(246, 250, 9);
+    text-align: center;
+}
+
+ /* Body da Linha */
+#tabela tbody tr {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#tabela thead tr th {
+    padding: 15px;
+}
+
+/* linha */
+#tabela tr {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+#calcReynoldsButton {
+    background-color: rgb(72, 49, 173);
+    color: rgb(246, 250, 9);
+}
