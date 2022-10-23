@@ -69,7 +69,7 @@ body {
 
 #menu-h ul li:last-child a {
     float: right;
-    background-color: rgb(147,147,147);
+    background-color: rgb(147, 147, 147);
 }
 
 #menu-h ul li:last-child a:hover {
@@ -170,7 +170,7 @@ h3 {
     text-align: center;
 }
 
-#textoApresentacao {
+.textoApresentacao {
     text-align: justify;
     margin-left: 30%;
     margin-right: 30%;
@@ -187,3 +187,15 @@ h3 {
 .imgHome {
     text-align: center;
 }
+
+/* Início dos Media
+
+/* @media (max-width: 720px) {
+    .textoApresentacao {
+        text-align: justify;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-style: italic;
+        font-size: larger;
+    }
+} */
