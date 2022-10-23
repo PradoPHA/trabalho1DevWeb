@@ -11,22 +11,47 @@
 </head>
 
 <body>
-    <a id="goToPrincipal" href="index.html">PÁGINA PRINCIPAL</a>
 
-    <h1>Calculadora Aerodinâmica</h1>
+    <nav id="menu-h">
+        <ul>
 
-    <h2>1ª Etapa - Dados Práticos</h2>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li><a target=”_blank”
+                    href="https://international.unifei.edu.br/extension/competition-projects/lots-aerodesign/">Saiba
+                    mais</a>
+            </li>
+
+            <li><a href="calculadora.html">Calculadora Aerodinâmica</a></li>
+        </ul>
+    </nav>
+
+    <div class="fundoCalc">
+        <div class="imgFundoCalc"></div>
+       
+    </div>
+
+    <br> <br>
+
+    <h1><b>Calculadora Aerodinâmica</b></h1>
+
+    <br> <br>
+
+    <h2>1ª Etapa - Dados Práticos e Cálculo de Reynolds</h2> <br>
 
     <h3>Dados do Avião</h3>
     <div class="inputs">
         <p>
             Peso <br>
-            <input id="peso" type="number" size="10" /> <br> <br>
+            <input id="peso" type="number" size="10"/> <br> 
             Área Molhada <br>
             <input id="areaMolhada" type="number" size="10" /> <br>
-            <!-- N máximo: <input id="nMax" type="number" size="10" /> -->
         </p>
-    </div>
+    </div> <br> <br>
 
     <h3>Características do Fluido</h3>
     <div class="inputs">
@@ -38,9 +63,9 @@
             Viscosidade cinemática <br>
             <input id="viscoCin" type="number" size="10" /> <br>
         </p>
-    </div>
+    </div> <br> <br>
 
-    <h3>Dados da Asa</h3>
+    <h3>Dados da Asa</h3> <br>
     <div class="inputs">
         <p>
             <b>Tipo 1: </b>Retangular <br>
@@ -57,15 +82,14 @@
             Corda na ponta <br>
             <input id="cordaPonta" type="number" size="10" /> <br>
         </p>
-    </div>
+    </div> <br>
 
-    <h2>2ª Etapa - Cálculo de Reynolds</h2>
+    <div class="text-center"><button class="button button1" type="button" onclick="calcReynolds()"><b>CALCULAR
+                REYNOLDS</b></button></div>
+    <b><p class="outputs" id="calcReynolds">
+    </p> </b><br>
 
-    <div class="text-center"><button class="button button1" type="button" onclick="calcReynolds()"><b>CALCULAR REYNOLDS</b></button></div>
-    <p class="outputs" id="calcReynolds">
-    </p>
-
-    <h2>3ª Etapa - Cálculo de Alongamento e afilamento</h2>
+    <h2>2ª Etapa - Cálculo de Alongamento e Afilamento</h2> <br>
 
     <h3>Dados do Perfil Aerodinâmico</h3>
     <div class="inputs">
@@ -85,13 +109,14 @@
             cl2 <br>
             <input id="cl2" type="number" size="10" /> <br>
         </p>
-    </div>
+    </div> <br>
 
-    <div class="text-center"><button class="button button2" type="button" onclick="calculo1()"><b>CALCULAR ALONGAMENTO E AFILAMENTO</b></button></div>
-    <p class="outputs" id="Alongamento"></p>
-    <p class="outputs" id="Afilamento"></p>
+    <div class="text-center"><button class="button button2" type="button" onclick="calculo1()"><b>CALCULAR ALONGAMENTO E
+                AFILAMENTO</b></button></div> <br>
+    <b><p class="outputs" id="Alongamento"></p>
+    <p class="outputs" id="Afilamento"></p></b> <br>
 
-    <h2>4ª Etapa - Cálculo dos Resultados Finais</h2>
+    <h2>3ª Etapa - Cálculo dos Resultados Finais</h2>
 
     <div class="inputs">Delta <br>
         <input id="delta" type="number" size="10" />
@@ -99,7 +124,7 @@
 
     <div class="text-center">
         <button class="button button3" type="button" onclick="calculo2()"><b>CALCULAR RESULTADOS</b></button>
-    </div>
+    </div> <br> 
 
 
     <p class="outputs" id="areaAsa"></p>

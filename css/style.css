@@ -1,5 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+#fundo {
+    width: 100vmax;
+    height: 100vmax;
+    background-image: url("/images/logoVetor.jpg");
+    background-size: contain;
+    opacity: 0.2;
+    background-repeat: repeat;
+    position: absolute;
+    background-position: center;
+}
+
+.fundoCalc {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgFundoCalc {
+    width: 100vmax;
+    height: 100vmax;
+    background-image: url("/images/logoVetor.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+}
+
+#menu-h {
+    background-color: rgb(0, 51, 126);
+}
+
+#menu-h ul {
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+}
+
+#menu-h ul li {
+    display: inline;
+}
+
+#menu-h ul li a {
+    color: rgb(246, 250, 9);
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu-h ul li a:hover {
+    background-color: rgb(246, 250, 9);
+    color: rgb(0, 51, 126);
+}
+
+#menu-h ul li:last-child a {
+    float: right;
+    background-color: rgb(147,147,147);
+}
+
+#menu-h ul li:last-child a:hover {
+    background-color: rgb(246, 250, 9);
+    color: rgb(0, 51, 126);
+}
+
+#textoApresentacao {
+    text-align: justify;
+}
+
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 51, 126);
     font-size: 8vh;
     text-align: center;
@@ -57,31 +140,50 @@ h3 {
 }
 
 .button {
-  background-color: rgb(246, 250, 9); /* Green */
-  border: none;
-  color: rgb(0, 51, 126);
-  border-radius: 12px;
-  border-style: outset;
-  border-color: rgb(0, 51, 126);
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+    background-color: rgb(246, 250, 9);
+    /* Green */
+    border: none;
+    color: rgb(0, 51, 126);
+    border-radius: 12px;
+    border-style: outset;
+    border-color: rgb(0, 51, 126);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .button:hover {
-  background-color: rgb(0, 51, 126);
-  color: rgb(246, 250, 9);
-  border-color: rgb(246, 250, 9);
+    background-color: rgb(0, 51, 126);
+    color: rgb(246, 250, 9);
+    border-color: rgb(246, 250, 9);
 }
 
-.outputs{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-style: dotted;
-    border: 12px;
+.outputs {
+    color: rgb(0, 51, 126);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 130%;
+    text-align: center;
+}
+
+#textoApresentacao {
+    text-align: justify;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-style: italic;
+    font-size: larger;
+}
+
+#imgApresentacao {
+    display: flex;
+    border-style: double;
+    border-radius: 5%;
+}
+
+.imgHome {
     text-align: center;
 }
