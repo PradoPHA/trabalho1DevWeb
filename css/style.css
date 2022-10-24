@@ -197,3 +197,10 @@ h3 {
         font-size: larger;
     }
 }
+
+@media (max-width: 720px) {
+    .imgApresentacao {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+} 
