@@ -18,18 +18,21 @@ Eduardo Ribeiro Felipe */
 
 body {
     background-color: white;
+    background-image: url("/trabalho1DevWeb/images/imagemFundo.png");
+    background-repeat: repeat;
+    background-image: ;
 }
 
-#fundo {
+/* #fundo {
     width: 100vmax;
     height: 100vmax;
-    background-image: url("/images/logoVetor.jpg");
+    background-image: url("/trabalho1DevWeb/images/logoVetor.jpg");
     background-size: contain;
     opacity: 0.2;
     background-repeat: repeat;
     position: absolute;
     background-position: center;
-}
+} */
 
 .fundoCalc {
     display: flex;
