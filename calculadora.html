@@ -46,9 +46,9 @@
     <h3>Dados do Avião</h3>
     <div class="inputs">
         <p>
-            Peso <br>
+            Peso (N)<br>
             <input id="peso" type="number" size="10"/> <br> 
-            Área Molhada <br>
+            Área Molhada (m<sup>2</sup>)<br>
             <input id="areaMolhada" type="number" size="10" /> <br>
         </p>
     </div> <br> <br>
@@ -56,11 +56,11 @@
     <h3>Características do Fluido</h3>
     <div class="inputs">
         <p>
-            Velocidade <br>
+            Velocidade (m/s)<br>
             <input id="velocidade" type="number" size="10" /> <br>
-            Densidade <br>
+            Densidade (kg/m<sup>3</sup>)<br>
             <input id="densidade" type="number" size="10" /> <br>
-            Viscosidade cinemática <br>
+            Viscosidade cinemática (m<sup>2</sup>/s)<br>
             <input id="viscoCin" type="number" size="10" /> <br>
         </p>
     </div> <br> <br>
@@ -73,13 +73,13 @@
             <b>Tipo 3: </b> Mista <br> <br>
             Tipo <br>
             <input id="tipoAsa" type="number" size="10" /> <br>
-            Envergadura <br>
+            Envergadura (m)<br>
             <input id="envergadura" type="number" size="10" /> <br>
-            Semi envergadura <br>
+            Semi envergadura (m)<br>
             <input id="semiEnvergadura" type="number" size="10" /> <br>
-            Corda na raiz <br>
+            Corda na raiz (m)<br>
             <input id="cordaRaiz" type="number" size="10" /> <br>
-            Corda na ponta <br>
+            Corda na ponta (m)<br>
             <input id="cordaPonta" type="number" size="10" /> <br>
         </p>
     </div> <br>
@@ -94,19 +94,19 @@
     <h3>Dados do Perfil Aerodinâmico</h3>
     <div class="inputs">
         <p>
-            cl_max <br>
+            cl<sub>max</sub> <br>
             <input id="clMax" type="number" size="10" /> <br>
-            cl_0 <br>
+            cl<sub>0</sub>  <br>
             <input id="clZero" type="number" size="10" /> <br>
-            cl_{alpha0} <br>
+            cl<sub> &alpha; = 0</sub> <br>
             <input id="clAlphaZero" type="number" size="10" /> <br>
-            alpha1 <br>
+            &alpha; 1 <br>
             <input id="alpha1" type="number" size="10" /> <br>
-            cl1 <br>
+            cl 1 <br>
             <input id="cl1" type="number" size="10" /> <br>
-            alpha2 <br>
+            &alpha; 2 <br>
             <input id="alpha2" type="number" size="10" /> <br>
-            cl2 <br>
+            cl 2 <br>
             <input id="cl2" type="number" size="10" /> <br>
         </p>
     </div> <br>
@@ -116,9 +116,9 @@
     <b><p class="outputs" id="Alongamento"></p>
     <p class="outputs" id="Afilamento"></p></b> <br>
 
-    <h2>3ª Etapa - Cálculo dos Resultados Finais</h2>
+    <h2>3ª Etapa - Cálculo dos Resultados Finais</h2> <br>
 
-    <div class="inputs">Delta <br>
+    <div class="inputs"> Fator de arrasto induzido &delta; <br>
         <input id="delta" type="number" size="10" />
     </div> <br> <br>
 
@@ -147,16 +147,16 @@
         <table id="tabela">
             <thead>
                 <tr>
-                    <th>Área da Asa</th>
+                    <th>Área da Asa (m<sup>2</sup>)</th>
                     <th>Alongamento</th>
                     <th>Afilamento</th>
-                    <th>Corda Média</th>
-                    <th>Y médio</th>
-                    <th>Coeficiente angular do perfil</th>
-                    <th>Coeficiente angular da asa</th>
+                    <th>Corda Média (m)</th>
+                    <th>Y médio (m)</th>
+                    <th>Coeficiente angular do perfil <br> (grau<sup>-1</sup>)</th>
+                    <th>Coeficiente angular da asa <br> (grau<sup>-1</sup>)</th>
                     <th>Constante de proporcionalidade</th>
                     <th>Constante de sustentação máximo da asa</th>
-                    <th>Velocidade de estol</th>
+                    <th>Velocidade de estol (m/s) </th>
                     <th>Coeficiente de atrito equivalente</th>
                     <th>Coeficiente de arrasto parasita</th>
                     <th>Coeficiente de sustentação do projeto</th>
