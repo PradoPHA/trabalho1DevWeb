@@ -133,11 +133,8 @@ function calcReynolds() {
     cordaMedia = cordaMediaAsa(cordaRaiz, afilamento, tipo);
 
     // Mostrar no site
-    reynolds1 = numeroReynolds(velocidade, cordaMedia, viscoCin);
-    reynoldsStr = reynolds1.toString();
-    reynoldsSplitted = reynoldsStr.split('.');
-    reynoldsFinal = "." + parseInt(reynoldsSplitted[1]);
-    document.getElementById("calcReynolds").innerText = "Reynolds: " + reynoldsFinal;
+    reynolds = numeroReynolds(velocidade, cordaMedia, viscoCin);
+    document.getElementById("calcReynolds").innerText = "Reynolds: " + reynolds.toFixed(0);
 
 }
 
@@ -238,21 +235,21 @@ function calculo2() {
     efProjeto = eficienciaMaxProjeto(clProjeto, cdProjeto);
 
     // Atribuindo valores que serão adicionados dinamicamente na tabela
-    td.innerText = area.toPrecision(5);
-    td2.innerText = alongamento.toPrecision(5);
-    td3.innerText = afilamento.toPrecision(5);
-    td4.innerText = cordaMedia.toPrecision(5);
-    td5.innerText = yMed.toPrecision(5);
-    td6.innerText = a0.toPrecision(5);
-    td7.innerText = aAsa.toPrecision(5);
-    td8.innerText = constProp.toPrecision(5);
-    td9.innerText = CLMax.toPrecision(5);
-    td10.innerText = velStol.toPrecision(5);
-    td11.innerText = coefAtrito.toPrecision(5);
-    td12.innerText = coefParasita.toPrecision(5);
-    td13.innerText = clProjeto.toPrecision(5);
-    td14.innerText = cdProjeto.toPrecision(5);
-    td15.innerText = efProjeto.toPrecision(5);
+    td.innerText = area.toFixed(3);
+    td2.innerText = alongamento.toFixed(3);
+    td3.innerText = afilamento.toFixed(3);
+    td4.innerText = cordaMedia.toFixed(3);
+    td5.innerText = yMed.toFixed(3);
+    td6.innerText = a0.toFixed(3);
+    td7.innerText = aAsa.toFixed(3);
+    td8.innerText = constProp.toFixed(3);
+    td9.innerText = CLMax.toFixed(3);
+    td10.innerText = velStol.toFixed(3);
+    td11.innerText = coefAtrito.toFixed(3);
+    td12.innerText = coefParasita.toFixed(3);
+    td13.innerText = clProjeto.toFixed(3);
+    td14.innerText = cdProjeto.toFixed(3);
+    td15.innerText = efProjeto.toFixed(3);
     tr.appendChild(td);
     tr.appendChild(td2);
     tr.appendChild(td3);
